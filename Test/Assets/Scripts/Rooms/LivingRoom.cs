@@ -48,6 +48,7 @@ public GameObject MovingPainting1;
 public GameObject MovingChair;
 public GameObject Television;
 public GameObject Chair_Disappearing;
+public GameObject Glass_Disappearing;
 
 
 /// AUDIO ///
@@ -105,7 +106,7 @@ public AnomalyCounterScript AnomalyCounterScript;
         AnomalyCounterScript.TheAnomalyCounter++;
         Debug.Log("Object Disappearing");
         AnomalyGeneratedText.GetComponent<Text>().text = "Object Disappearing";
-        DisappearingPicker = Random.Range(1,3);
+        DisappearingPicker = Random.Range(1,4);
         if (DisappearingPicker == 1)
         {
             Television.GetComponent<Animation>().Play("Tv_Disappearing");
@@ -113,7 +114,11 @@ public AnomalyCounterScript AnomalyCounterScript;
         if (DisappearingPicker == 2)
         {
         Chair_Disappearing.GetComponent<Animation>().Play("Chair_Disappear");
-        }    
+        }
+        if (DisappearingPicker == 3)
+        {
+        Glass_Disappearing.GetComponent<Animation>().Play("Glass_Disappearing");
+        }  
     }
 
 
@@ -219,6 +224,7 @@ public AnomalyCounterScript AnomalyCounterScript;
         OtherBtn.enabled = true;
         Television.GetComponent<Animation>().Play("Tv_Idle");
         Chair_Disappearing.GetComponent<Animation>().Play("Chair_Idle");
+        Glass_Disappearing.GetComponent<Animation>().Play("Glass_Idle");
         AnomalyFixed.SetActive(false);
         AnomalyCounterScript.TheAnomalyCounter--;
         ObjectDisappearingAnomaly = false;
