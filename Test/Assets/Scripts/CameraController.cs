@@ -5,103 +5,119 @@ using UnityEngine.UI;
 
 public class CameraController : MonoBehaviour
 {
-    public GameObject HallCam;
-    public GameObject BedroomCam;
-    public GameObject BathroomCam;
-    public GameObject LivingRoomCam;
+
+    public int points = 1;
+
+    public GameObject Cam1;
+    public GameObject Cam2;
+    public GameObject Cam3;
+    public GameObject Cam4;
+
+    public Button Right;
+    public Button Left;
+
     public AudioSource ButtonClick;
 
     public GameObject HallFix;
     public GameObject LivingRoomFix;
     public GameObject BedroomFix;
     public GameObject BathroomFix;
-    // Update is called once per frame
+
+    public GameObject PlayerRoomText;
+
     void Start()
     {
-        LivingRoomCam.SetActive(false);
-        HallCam.SetActive(true);
-        BedroomCam.SetActive(false);
-        BathroomCam.SetActive(false);
+        Cam1.SetActive(true);
+        Cam2.SetActive(false);
+        Cam3.SetActive(false);
+        Cam4.SetActive(false);
 
-        HallFix.SetActive(true);
-        LivingRoomFix.SetActive(false);
-        BedroomFix.SetActive(false);
-        BathroomFix.SetActive(false);
-    }
-
-    public void LivingRoomButton()
-    {
-        LivingRoomCam.SetActive(true);
-        HallCam.SetActive(false);
-        BedroomCam.SetActive(false);
-        BathroomCam.SetActive(false);
-        ButtonClick.Play();
-
-        HallFix.SetActive(false);
         LivingRoomFix.SetActive(true);
-        BedroomFix.SetActive(false);
-        BathroomFix.SetActive(false);
-    }
-    public void HallCamButton()
-    {
-        LivingRoomCam.SetActive(false);
-        HallCam.SetActive(true);
-        BedroomCam.SetActive(false);
-        BathroomCam.SetActive(false);
-        ButtonClick.Play();
-
-        HallFix.SetActive(true);
-        LivingRoomFix.SetActive(false);
-        BedroomFix.SetActive(false);
-        BathroomFix.SetActive(false);
-    }
-    public void BedroomCamButton()
-    {
-        LivingRoomCam.SetActive(false);
-        HallCam.SetActive(false);
-        BedroomCam.SetActive(true);
-        BathroomCam.SetActive(false);
-        ButtonClick.Play();
-
         HallFix.SetActive(false);
-        LivingRoomFix.SetActive(false);
-        BedroomFix.SetActive(true);
-        BathroomFix.SetActive(false);
-    }
-    public void BathroomCamButton()
-    {
-        LivingRoomCam.SetActive(false);
-        HallCam.SetActive(false);
-        BedroomCam.SetActive(false);
-        BathroomCam.SetActive(true);
-        ButtonClick.Play();
-
-        HallFix.SetActive(false);
-        LivingRoomFix.SetActive(false);
         BedroomFix.SetActive(false);
-        BathroomFix.SetActive(true);
+        BathroomFix.SetActive(false);
+        PlayerRoomText.GetComponent<Text>().text = "Living Room";
     }
-    
-    
-    
-    
-    
-    
-    
-    
-    
+
     public void RightClick()
     {
-        HallCam.SetActive(false);
-        LivingRoomCam.SetActive(true);
+        points++;
+        ButtonClick.Play();
     }
-
     public void LeftClick()
     {
-        HallCam.SetActive(true);
-        LivingRoomCam.SetActive(false); 
+        points--;
+        ButtonClick.Play();
     }
 
+    void Update()
+    {
+        if (points == 5)
+        {
+            points--;
+            points--;
+            points--;
+            points--;
+        }
+        if (points == 0)
+        {
+            points++;
+            points++;
+            points++;
+            points++;
+        }
 
+        if (points == 1)
+        {
+            Cam1.SetActive(true);
+            Cam2.SetActive(false);
+            Cam3.SetActive(false);
+            Cam4.SetActive(false);
 
+            LivingRoomFix.SetActive(true);
+            HallFix.SetActive(false);
+            BedroomFix.SetActive(false);
+            BathroomFix.SetActive(false);
+            PlayerRoomText.GetComponent<Text>().text = "Living Room";
+        }
+        if (points == 2)
+        {
+            Cam1.SetActive(false);
+            Cam2.SetActive(true);
+            Cam3.SetActive(false);
+            Cam4.SetActive(false);
+
+            LivingRoomFix.SetActive(false);
+            HallFix.SetActive(true);
+            BedroomFix.SetActive(false);
+            BathroomFix.SetActive(false);
+            PlayerRoomText.GetComponent<Text>().text = "Hall";
+        }
+        if (points == 3)
+        {
+            Cam1.SetActive(false);
+            Cam2.SetActive(false);
+            Cam3.SetActive(true);
+            Cam4.SetActive(false);
+
+            LivingRoomFix.SetActive(false);
+            HallFix.SetActive(false);
+            BedroomFix.SetActive(true);
+            BathroomFix.SetActive(false);
+            PlayerRoomText.GetComponent<Text>().text = "Bedroom";
+        }
+        if (points == 4)
+        {
+            Cam1.SetActive(false);
+            Cam2.SetActive(false);
+            Cam3.SetActive(false);
+            Cam4.SetActive(true);
+
+            LivingRoomFix.SetActive(false);
+            HallFix.SetActive(false);
+            BedroomFix.SetActive(false);
+            BathroomFix.SetActive(true);
+            PlayerRoomText.GetComponent<Text>().text = "Bathroom";
+        }
+    }
 }

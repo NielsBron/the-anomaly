@@ -31,6 +31,8 @@ public Button ObjectMovementBtn;
 public Button IntruderBtn;
 public Button NoiseBtn;
 public Button OtherBtn;
+public Button Right;
+public Button Left;
 
 /// LIGHTS ///
 public GameObject Light1;
@@ -181,12 +183,16 @@ public AnomalyCounterScript AnomalyCounterScript;
     {   ButtonClick.Play();
         AnomalyWindow.SetActive(true);
         FixAnomalyBtn.SetActive(false);
+        Right.enabled = false;
+        Left.enabled = false;
     }
     public void CloseWindow()
     {
         ButtonClick.Play();
         AnomalyWindow.SetActive(false);
         FixAnomalyBtn.SetActive(true);
+        Right.enabled = true;
+        Left.enabled = true;
     }
 
     IEnumerator FixObjectDisappearing()

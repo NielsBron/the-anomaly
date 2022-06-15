@@ -47,7 +47,7 @@ public GameObject AnomalyCountText;
     }
     void RoomPicker()
     {
-        RoomPicked = Random.Range(1,2);
+        RoomPicked = Random.Range(1,3);
         if(RoomPicked == 1)
         {
             livingRoomScript.AnomalyPicker();
