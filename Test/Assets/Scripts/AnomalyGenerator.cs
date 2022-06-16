@@ -28,7 +28,7 @@ public GameObject AnomalyCountText;
         timer -= Time.deltaTime;
         if( timer < 0)
         {
-            GeneratedNumber = Random.Range(2, 3);
+            GeneratedNumber = Random.Range(1, 5);
             AnomalyCounter();
             TimerText.GetComponent<Text>().text = "Generated " + TimesGenerated + " Time(s)";
             timer++; timer++; timer++; timer++; timer++;
@@ -47,7 +47,7 @@ public GameObject AnomalyCountText;
     }
     void RoomPicker()
     {
-        RoomPicked = Random.Range(3,4);
+        RoomPicked = Random.Range(1,4);
         if(RoomPicked == 1)
         {
             livingRoomScript.AnomalyPicker();

@@ -13,6 +13,7 @@ public bool ObjectMovementAnomaly = false;
 public bool IntruderAnomaly = false;
 public bool NoiseAnomaly = false;
 public bool OtherAnomaly = false;
+public bool DemonicPresenceAnomaly = false;
 
 /// TEXT ///
 public GameObject AnomalyGeneratedText;
@@ -31,6 +32,7 @@ public Button ObjectMovementBtn;
 public Button IntruderBtn;
 public Button NoiseBtn;
 public Button OtherBtn;
+public Button DemonicPresenceBtn;
 public Button Right;
 public Button Left;
 
@@ -54,22 +56,18 @@ public AudioSource IntruderSound;
 public AudioSource NoiseSound;
 public AudioSource AnomalyFixSound;
 public AudioSource ButtonClick;
+public AudioSource RemPodSound;
 
 public AnomalyCounterScript AnomalyCounterScript;
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+public GameObject RemPodScript;
+public GameObject RemPodLight1;
+public GameObject RemPodLight2;
+public GameObject RemPodLight3;
+public GameObject RemPodLight4;
 
     public void AnomalyPicker()
     {
-        AnomalyPicked = Random.Range(1,6);
+        AnomalyPicked = Random.Range(1,7);
         if (AnomalyPicked == 1 && ObjectDisappearingAnomaly == false)
         {
         ObjectDisappearingAnomaly = true;
@@ -99,7 +97,11 @@ public AnomalyCounterScript AnomalyCounterScript;
         OtherAnomaly = true;
         Other();
         }
-
+        if (AnomalyPicked == 6 && DemonicPresenceAnomaly == false)
+        {
+        DemonicPresenceAnomaly = true;
+        DemonicPresence();
+        }
         Debug.Log("Hall");
     }
     
@@ -153,6 +155,21 @@ public AnomalyCounterScript AnomalyCounterScript;
     }
     }
     
+    public void DemonicPresence()
+    {
+    StartCoroutine(DemonicPresence1());
+    }
+
+    IEnumerator DemonicPresence1()
+    {
+        AnomalyCounterScript.TheAnomalyCounter++;
+        Debug.Log("Demonic Presence");
+        AnomalyGeneratedText.GetComponent<Text>().text = "Demonic Presence";
+        RemPodScript.SetActive(true);
+        yield return new WaitForSeconds (0.0f);
+    }
+    
+    
     
     ////////////////////////////////////////////////////
     /////////////// FIX FUNCTIONS //////////////////////
@@ -178,6 +195,10 @@ public AnomalyCounterScript AnomalyCounterScript;
     public void OtherBtnClicked()
 {
     StartCoroutine(FixOther());
+}
+    public void DemonicPresenceBtnClicked()
+{
+    StartCoroutine(FixDemonicPresence());
 }
 //// Anomaly Fixer Button functions
 
@@ -394,6 +415,53 @@ public AnomalyCounterScript AnomalyCounterScript;
         IntruderBtn.enabled = true;
         NoiseBtn.enabled = true;
         OtherBtn.enabled = true;
+        }
+    }
+    IEnumerator FixDemonicPresence()
+    {
+        ButtonClick.Play();
+        //// DISABLE ALL BUTTONS WHEN ONE BUTTON IS PRESSED ////
+        ObjectDisappearingBtn.enabled = false;
+        ObjectMovementBtn.enabled = false;
+        IntruderBtn.enabled = false;
+        NoiseBtn.enabled = false;
+        OtherBtn.enabled = false;
+        DemonicPresenceBtn.enabled = false;
+        yield return new WaitForSeconds(2.0f);
+        //// IF TRUE ////
+        if (DemonicPresenceAnomaly == true) {
+        AnomalyFixed.SetActive(true);
+        AnomalyFixSound.Play();
+        yield return new WaitForSeconds(2.0f);
+        ObjectDisappearingBtn.enabled = true;
+        ObjectMovementBtn.enabled = true;
+        IntruderBtn.enabled = true;
+        NoiseBtn.enabled = true;
+        OtherBtn.enabled = true;
+        DemonicPresenceBtn.enabled = true;
+        RemPodSound.Stop();
+        RemPodScript.SetActive(false);
+        AnomalyFixed.SetActive(false);
+        RemPodLight1.SetActive(false);
+        RemPodLight2.SetActive(false);
+        RemPodLight3.SetActive(false);
+        RemPodLight4.SetActive(false);
+        AnomalyCounterScript.TheAnomalyCounter--;
+        DemonicPresenceAnomaly = false;
+        AnomalyCountText.GetComponent<Text>().text = "Anomalies: " + AnomalyCounterScript.TheAnomalyCounter;
+        }
+        else {
+        yield return new WaitForSeconds(2.0f);
+        AnomalyNotFoundText.SetActive(true);
+        AnomalyNotFoundText.GetComponent<Text>().text = "No type Demonic Presence Anomaly found";
+        yield return new WaitForSeconds(2.0f);
+        AnomalyNotFoundText.SetActive(false);
+        ObjectDisappearingBtn.enabled = true;
+        ObjectMovementBtn.enabled = true;
+        IntruderBtn.enabled = true;
+        NoiseBtn.enabled = true;
+        OtherBtn.enabled = true;
+        DemonicPresenceBtn.enabled = true;
         }
     }
     

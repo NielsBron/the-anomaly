@@ -44,6 +44,7 @@ public GameObject Light2;
 /// OBJECTS ///
 public GameObject OuijaBoard;
 public GameObject DisappearingBlanket;
+public GameObject IntruderObj;
 
 
 /// AUDIO ///
@@ -102,6 +103,7 @@ public AnomalyCounterScript AnomalyCounterScript;
     
     public void ObjectDisappearing()
     {
+        AnomalyCounterScript.TheAnomalyCounter++;
         Debug.Log("Object Disappearing");
         AnomalyGeneratedText.GetComponent<Text>().text = "Object Disappearing";
         DisappearingBlanket.GetComponent<Animation>().Play("Blanket_Disappearing");
@@ -109,24 +111,29 @@ public AnomalyCounterScript AnomalyCounterScript;
 
     public void ObjectMovement()
     {
+        AnomalyCounterScript.TheAnomalyCounter++;
         Debug.Log("Object Movement");
         AnomalyGeneratedText.GetComponent<Text>().text = "Object Movement";
     }
 
     public void Intruder()
     {
+        AnomalyCounterScript.TheAnomalyCounter++;
         Debug.Log("Intruder");
         AnomalyGeneratedText.GetComponent<Text>().text = "Intruder";
+        IntruderObj.SetActive(true);
     }
 
     public void Noise()
     {
+        AnomalyCounterScript.TheAnomalyCounter++;
         Debug.Log("Noise");
         AnomalyGeneratedText.GetComponent<Text>().text = "Noise";
     }
 
     public void Other()
     {
+        AnomalyCounterScript.TheAnomalyCounter++;
         Debug.Log("Other");
         AnomalyGeneratedText.GetComponent<Text>().text = "Other";
     }
@@ -294,6 +301,7 @@ public AnomalyCounterScript AnomalyCounterScript;
         NoiseBtn.enabled = true;
         OtherBtn.enabled = true;
         DemonicPresenceBtn.enabled = true;
+        IntruderObj.SetActive(false);
         AnomalyFixed.SetActive(false);
         AnomalyCounterScript.TheAnomalyCounter--;
         IntruderAnomaly = false;
