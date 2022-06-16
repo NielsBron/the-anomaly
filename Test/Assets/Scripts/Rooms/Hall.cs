@@ -46,6 +46,7 @@ public GameObject PaintingBad1;
 public GameObject PaintingBad2;
 public GameObject MovingPainting1;
 public GameObject DisappearingPainting1;
+public GameObject IntruderObj;
 
 
 /// AUDIO ///
@@ -123,6 +124,7 @@ public AnomalyCounterScript AnomalyCounterScript;
         AnomalyCounterScript.TheAnomalyCounter++;
         Debug.Log("Intruder");
         AnomalyGeneratedText.GetComponent<Text>().text = "Intruder";
+        IntruderObj.SetActive(true);
     }
 
     public void Noise()
@@ -293,6 +295,7 @@ public AnomalyCounterScript AnomalyCounterScript;
         IntruderBtn.enabled = true;
         NoiseBtn.enabled = true;
         OtherBtn.enabled = true;
+        IntruderObj.SetActive(false);
         AnomalyFixed.SetActive(false);
         AnomalyCounterScript.TheAnomalyCounter--;
         IntruderAnomaly = false;
