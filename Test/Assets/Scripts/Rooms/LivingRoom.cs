@@ -61,6 +61,8 @@ public AudioSource NoiseSound;
 public AudioSource AnomalyFixSound;
 public AudioSource ButtonClick;
 public AudioSource RemPodSound;
+public AudioSource MovingChairSound;
+public AudioSource MovingPaintingSound;
 
 public AnomalyCounterScript AnomalyCounterScript;
 public GameObject RemPodScript;
@@ -76,7 +78,7 @@ public GameObject RemPodLight4;
 
     public void AnomalyPicker()
     {
-        AnomalyPicked = Random.Range(1,7);
+        AnomalyPicked = Random.Range(2,3);
 
         if (AnomalyPicked == 1 && ObjectDisappearingAnomaly == false)
         {
@@ -146,10 +148,12 @@ public GameObject RemPodLight4;
         if (MovementPicker == 1)
         {
         MovingPainting1.GetComponent<Animation>().Play("PaintingMoving2");
+        MovingPaintingSound.Play();
         }
         if (MovementPicker == 2)
         {
         MovingChair.GetComponent<Animation>().Play("MovingChair");
+        MovingChairSound.Play();
         }
     }
 
