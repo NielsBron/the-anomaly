@@ -78,7 +78,7 @@ public GameObject RemPodLight4;
 
     public void AnomalyPicker()
     {
-        AnomalyPicked = Random.Range(2,3);
+        AnomalyPicked = Random.Range(1,7);
 
         if (AnomalyPicked == 1 && ObjectDisappearingAnomaly == false)
         {
