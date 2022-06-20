@@ -65,37 +65,37 @@ public AnomalyCounterScript AnomalyCounterScript;
 
         if (AnomalyPicked == 1 && ObjectDisappearingAnomaly == false)
         {
-        ObjectDisappearingAnomaly = true;
-        ObjectDisappearing();
+            ObjectDisappearingAnomaly = true;
+            ObjectDisappearing();
         }
 
         if (AnomalyPicked == 2 && ObjectMovementAnomaly == false)
         {
-        ObjectMovementAnomaly = true;
-        ObjectMovement();
+            ObjectMovementAnomaly = true;
+            ObjectMovement();
         }
 
         if (AnomalyPicked == 3 && IntruderAnomaly == false)
         {
-        IntruderAnomaly = true;
-        Intruder();
+            IntruderAnomaly = true;
+            Intruder();
         }
 
         if (AnomalyPicked == 4 && NoiseAnomaly == false)
         {
-        NoiseAnomaly = true;
-        Noise();
+            NoiseAnomaly = true;
+            Noise();
         }
 
         if (AnomalyPicked == 5 && OtherAnomaly == false)
         {
-        OtherAnomaly = true;
-        Other();
+            OtherAnomaly = true;
+            Other();
         }
         if (AnomalyPicked == 6 && DemonicPresenceAnomaly == false)
         {
-        DemonicPresenceAnomaly = true;
-        DemonicPresence();
+            DemonicPresenceAnomaly = true;
+            DemonicPresence();
         }
 
         Debug.Log("Bedroom");
@@ -140,7 +140,7 @@ public AnomalyCounterScript AnomalyCounterScript;
 
     public void DemonicPresence()
     {
-    StartCoroutine(DemonicPresence1());
+        StartCoroutine(DemonicPresence1());
     }
 
     IEnumerator DemonicPresence1()
@@ -157,31 +157,32 @@ public AnomalyCounterScript AnomalyCounterScript;
      /// ANOMALY FIXER///
     public void ObjectDisappearingBtnClicked()
     {
-    StartCoroutine(FixObjectDisappearing());
+        StartCoroutine(FixObjectDisappearing());
     }
     public void ObjectMovementBtnClicked()
     {
-    StartCoroutine(FixObjectMovement());
+        StartCoroutine(FixObjectMovement());
     }
     public void IntruderBtnClicked()
     {
-    StartCoroutine(FixIntruder());
+        StartCoroutine(FixIntruder());
     }
     public void NoiseBtnClicked()
     {
-    StartCoroutine(FixNoise());
+        StartCoroutine(FixNoise());
     }
     public void OtherBtnClicked()
     {
-    StartCoroutine(FixOther());
+        StartCoroutine(FixOther());
     }
     public void DemonicPresenceBtnClicked()
     {
-    StartCoroutine(FixDemonicPresence());
+        StartCoroutine(FixDemonicPresence());
     }
 
     public void FixAnomaly()
-    {   ButtonClick.Play();
+    {   
+        ButtonClick.Play();
         AnomalyWindow.SetActive(true);
         FixAnomalyBtn.SetActive(false);
         Right.enabled = false;
@@ -208,36 +209,39 @@ public AnomalyCounterScript AnomalyCounterScript;
         DemonicPresenceBtn.enabled = false;
         yield return new WaitForSeconds(2.0f);
         //// IF TRUE ////
-        if (ObjectDisappearingAnomaly == true) {
-        AnomalyFixed.SetActive(true);
-        AnomalyFixSound.Play();
-        yield return new WaitForSeconds(2.0f);
-        ObjectDisappearingBtn.enabled = true;
-        ObjectMovementBtn.enabled = true;
-        IntruderBtn.enabled = true;
-        NoiseBtn.enabled = true;
-        OtherBtn.enabled = true;
-        DemonicPresenceBtn.enabled = true;
-        DisappearingBlanket.GetComponent<Animation>().Play("Blanket_Idle");
-        AnomalyFixed.SetActive(false);
-        AnomalyCounterScript.TheAnomalyCounter--;
-        ObjectDisappearingAnomaly = false;
-        AnomalyCountText.GetComponent<Text>().text = "Anomalies: " + AnomalyCounterScript.TheAnomalyCounter;
+        if (ObjectDisappearingAnomaly == true) 
+        {
+            AnomalyFixed.SetActive(true);
+            AnomalyFixSound.Play();
+            yield return new WaitForSeconds(2.0f);
+            ObjectDisappearingBtn.enabled = true;
+            ObjectMovementBtn.enabled = true;
+            IntruderBtn.enabled = true;
+            NoiseBtn.enabled = true;
+            OtherBtn.enabled = true;
+            DemonicPresenceBtn.enabled = true;
+            DisappearingBlanket.GetComponent<Animation>().Play("Blanket_Idle");
+            AnomalyFixed.SetActive(false);
+            AnomalyCounterScript.TheAnomalyCounter--;
+            ObjectDisappearingAnomaly = false;
+            AnomalyCountText.GetComponent<Text>().text = "Anomalies: " + AnomalyCounterScript.TheAnomalyCounter;
         }
-        else {
-        yield return new WaitForSeconds(2.0f);
-        AnomalyNotFoundText.SetActive(true);
-        AnomalyNotFoundText.GetComponent<Text>().text = "No type Object Disappearing Anomaly found";
-        yield return new WaitForSeconds(2.0f);
-        AnomalyNotFoundText.SetActive(false);
-        ObjectDisappearingBtn.enabled = true;
-        ObjectMovementBtn.enabled = true;
-        IntruderBtn.enabled = true;
-        NoiseBtn.enabled = true;
-        OtherBtn.enabled = true;
-        DemonicPresenceBtn.enabled = true;
+        else 
+        {
+            yield return new WaitForSeconds(2.0f);
+            AnomalyNotFoundText.SetActive(true);
+            AnomalyNotFoundText.GetComponent<Text>().text = "No type Object Disappearing Anomaly found";
+            yield return new WaitForSeconds(2.0f);
+            AnomalyNotFoundText.SetActive(false);
+            ObjectDisappearingBtn.enabled = true;
+            ObjectMovementBtn.enabled = true;
+            IntruderBtn.enabled = true;
+            NoiseBtn.enabled = true;
+            OtherBtn.enabled = true;
+            DemonicPresenceBtn.enabled = true;
         }
     }
+
     IEnumerator FixObjectMovement()
     {
         ButtonClick.Play();
@@ -250,35 +254,38 @@ public AnomalyCounterScript AnomalyCounterScript;
         DemonicPresenceBtn.enabled = false;
         yield return new WaitForSeconds(2.0f);
         //// IF TRUE ////
-        if (ObjectMovementAnomaly == true) {
-        AnomalyFixed.SetActive(true);
-        AnomalyFixSound.Play();
-        yield return new WaitForSeconds(2.0f);
-        ObjectDisappearingBtn.enabled = true;
-        ObjectMovementBtn.enabled = true;
-        IntruderBtn.enabled = true;
-        NoiseBtn.enabled = true;
-        OtherBtn.enabled = true;
-        DemonicPresenceBtn.enabled = true;
-        AnomalyFixed.SetActive(false);
-        AnomalyCounterScript.TheAnomalyCounter--;
-        ObjectMovementAnomaly = false;
-        AnomalyCountText.GetComponent<Text>().text = "Anomalies: " + AnomalyCounterScript.TheAnomalyCounter;
+        if (ObjectMovementAnomaly == true) 
+        {
+            AnomalyFixed.SetActive(true);
+            AnomalyFixSound.Play();
+            yield return new WaitForSeconds(2.0f);
+            ObjectDisappearingBtn.enabled = true;
+            ObjectMovementBtn.enabled = true;
+            IntruderBtn.enabled = true;
+            NoiseBtn.enabled = true;
+            OtherBtn.enabled = true;
+            DemonicPresenceBtn.enabled = true;
+            AnomalyFixed.SetActive(false);
+            AnomalyCounterScript.TheAnomalyCounter--;
+            ObjectMovementAnomaly = false;
+            AnomalyCountText.GetComponent<Text>().text = "Anomalies: " + AnomalyCounterScript.TheAnomalyCounter;
         }
-        else {
-        yield return new WaitForSeconds(2.0f);
-        AnomalyNotFoundText.SetActive(true);
-        AnomalyNotFoundText.GetComponent<Text>().text = "No type Object Movement Anomaly found";
-        yield return new WaitForSeconds(2.0f);
-        AnomalyNotFoundText.SetActive(false);
-        ObjectDisappearingBtn.enabled = true;
-        ObjectMovementBtn.enabled = true;
-        IntruderBtn.enabled = true;
-        NoiseBtn.enabled = true;
-        OtherBtn.enabled = true;
-        DemonicPresenceBtn.enabled = true;
+        else 
+        {
+            yield return new WaitForSeconds(2.0f);
+            AnomalyNotFoundText.SetActive(true);
+            AnomalyNotFoundText.GetComponent<Text>().text = "No type Object Movement Anomaly found";
+            yield return new WaitForSeconds(2.0f);
+            AnomalyNotFoundText.SetActive(false);
+            ObjectDisappearingBtn.enabled = true;
+            ObjectMovementBtn.enabled = true;
+            IntruderBtn.enabled = true;
+            NoiseBtn.enabled = true;
+            OtherBtn.enabled = true;
+            DemonicPresenceBtn.enabled = true;
         }
     }
+
     IEnumerator FixIntruder()
     {
         ButtonClick.Play();
@@ -291,36 +298,39 @@ public AnomalyCounterScript AnomalyCounterScript;
         DemonicPresenceBtn.enabled = false;
         yield return new WaitForSeconds(2.0f);
         //// IF TRUE ////
-        if (IntruderAnomaly == true) {
-        AnomalyFixed.SetActive(true);
-        AnomalyFixSound.Play();
-        yield return new WaitForSeconds(2.0f);
-        ObjectDisappearingBtn.enabled = true;
-        ObjectMovementBtn.enabled = true;
-        IntruderBtn.enabled = true;
-        NoiseBtn.enabled = true;
-        OtherBtn.enabled = true;
-        DemonicPresenceBtn.enabled = true;
-        IntruderObj.SetActive(false);
-        AnomalyFixed.SetActive(false);
-        AnomalyCounterScript.TheAnomalyCounter--;
-        IntruderAnomaly = false;
-        AnomalyCountText.GetComponent<Text>().text = "Anomalies: " + AnomalyCounterScript.TheAnomalyCounter;
+        if (IntruderAnomaly == true) 
+        {
+            AnomalyFixed.SetActive(true);
+            AnomalyFixSound.Play();
+            yield return new WaitForSeconds(2.0f);
+            ObjectDisappearingBtn.enabled = true;
+            ObjectMovementBtn.enabled = true;
+            IntruderBtn.enabled = true;
+            NoiseBtn.enabled = true;
+            OtherBtn.enabled = true;
+            DemonicPresenceBtn.enabled = true;
+            IntruderObj.SetActive(false);
+            AnomalyFixed.SetActive(false);
+            AnomalyCounterScript.TheAnomalyCounter--;
+            IntruderAnomaly = false;
+            AnomalyCountText.GetComponent<Text>().text = "Anomalies: " + AnomalyCounterScript.TheAnomalyCounter;
         }
-        else {
-        yield return new WaitForSeconds(2.0f);
-        AnomalyNotFoundText.SetActive(true);
-        AnomalyNotFoundText.GetComponent<Text>().text = "No type Intruder Anomaly found";
-        yield return new WaitForSeconds(2.0f);
-        AnomalyNotFoundText.SetActive(false);
-        ObjectDisappearingBtn.enabled = true;
-        ObjectMovementBtn.enabled = true;
-        IntruderBtn.enabled = true;
-        NoiseBtn.enabled = true;
-        OtherBtn.enabled = true;
-        DemonicPresenceBtn.enabled = true;
+        else 
+        {
+            yield return new WaitForSeconds(2.0f);
+            AnomalyNotFoundText.SetActive(true);
+            AnomalyNotFoundText.GetComponent<Text>().text = "No type Intruder Anomaly found";
+            yield return new WaitForSeconds(2.0f);
+            AnomalyNotFoundText.SetActive(false);
+            ObjectDisappearingBtn.enabled = true;
+            ObjectMovementBtn.enabled = true;
+            IntruderBtn.enabled = true;
+            NoiseBtn.enabled = true;
+            OtherBtn.enabled = true;
+            DemonicPresenceBtn.enabled = true;
         }
     }
+
     IEnumerator FixNoise()
     {
         ButtonClick.Play();
@@ -333,37 +343,40 @@ public AnomalyCounterScript AnomalyCounterScript;
         DemonicPresenceBtn.enabled = false;
         yield return new WaitForSeconds(2.0f);
         //// IF TRUE ////
-        if (NoiseAnomaly == true) {
-        NoiseSound.Stop();
-        AnomalyFixSound.Play();
-        AnomalyFixed.SetActive(true);
-        yield return new WaitForSeconds(2.0f);
-        ObjectDisappearingBtn.enabled = true;
-        ObjectMovementBtn.enabled = true;
-        IntruderBtn.enabled = true;
-        NoiseBtn.enabled = true;
-        OtherBtn.enabled = true;
-        DemonicPresenceBtn.enabled = true;
-        AnomalyFixed.SetActive(false);
-        AnomalyCounterScript.TheAnomalyCounter--;
-        NoiseSound.Stop();
-        NoiseAnomaly = false;
-        AnomalyCountText.GetComponent<Text>().text = "Anomalies: " + AnomalyCounterScript.TheAnomalyCounter;
+        if (NoiseAnomaly == true) 
+        {
+            NoiseSound.Stop();
+            AnomalyFixSound.Play();
+            AnomalyFixed.SetActive(true);
+            yield return new WaitForSeconds(2.0f);
+            ObjectDisappearingBtn.enabled = true;
+            ObjectMovementBtn.enabled = true;
+            IntruderBtn.enabled = true;
+            NoiseBtn.enabled = true;
+            OtherBtn.enabled = true;
+            DemonicPresenceBtn.enabled = true;
+            AnomalyFixed.SetActive(false);
+            AnomalyCounterScript.TheAnomalyCounter--;
+            NoiseSound.Stop();
+            NoiseAnomaly = false;
+            AnomalyCountText.GetComponent<Text>().text = "Anomalies: " + AnomalyCounterScript.TheAnomalyCounter;
         }
-        else {
-        yield return new WaitForSeconds(2.0f);
-        AnomalyNotFoundText.SetActive(true);
-        AnomalyNotFoundText.GetComponent<Text>().text = "No type Noise Anomaly found";
-        yield return new WaitForSeconds(2.0f);
-        AnomalyNotFoundText.SetActive(false);
-        ObjectDisappearingBtn.enabled = true;
-        ObjectMovementBtn.enabled = true;
-        IntruderBtn.enabled = true;
-        NoiseBtn.enabled = true;
-        OtherBtn.enabled = true;
-        DemonicPresenceBtn.enabled = true;
+        else 
+        {
+            yield return new WaitForSeconds(2.0f);
+            AnomalyNotFoundText.SetActive(true);
+            AnomalyNotFoundText.GetComponent<Text>().text = "No type Noise Anomaly found";
+            yield return new WaitForSeconds(2.0f);
+            AnomalyNotFoundText.SetActive(false);
+            ObjectDisappearingBtn.enabled = true;
+            ObjectMovementBtn.enabled = true;
+            IntruderBtn.enabled = true;
+            NoiseBtn.enabled = true;
+            OtherBtn.enabled = true;
+            DemonicPresenceBtn.enabled = true;
         }
     }
+
     IEnumerator FixOther()
     {
         ButtonClick.Play();
@@ -376,35 +389,38 @@ public AnomalyCounterScript AnomalyCounterScript;
         DemonicPresenceBtn.enabled = false;
         yield return new WaitForSeconds(2.0f);
         //// IF TRUE ////
-        if (OtherAnomaly == true) {
-        AnomalyFixed.SetActive(true);
-        AnomalyFixSound.Play();
-        yield return new WaitForSeconds(2.0f);
-        ObjectDisappearingBtn.enabled = true;
-        ObjectMovementBtn.enabled = true;
-        IntruderBtn.enabled = true;
-        NoiseBtn.enabled = true;
-        OtherBtn.enabled = true;
-        DemonicPresenceBtn.enabled = true;
-        AnomalyFixed.SetActive(false);
-        AnomalyCounterScript.TheAnomalyCounter--;
-        OtherAnomaly = false;
-        AnomalyCountText.GetComponent<Text>().text = "Anomalies: " + AnomalyCounterScript.TheAnomalyCounter;
+        if (OtherAnomaly == true) 
+        {
+            AnomalyFixed.SetActive(true);
+            AnomalyFixSound.Play();
+            yield return new WaitForSeconds(2.0f);
+            ObjectDisappearingBtn.enabled = true;
+            ObjectMovementBtn.enabled = true;
+            IntruderBtn.enabled = true;
+            NoiseBtn.enabled = true;
+            OtherBtn.enabled = true;
+            DemonicPresenceBtn.enabled = true;
+            AnomalyFixed.SetActive(false);
+            AnomalyCounterScript.TheAnomalyCounter--;
+            OtherAnomaly = false;
+            AnomalyCountText.GetComponent<Text>().text = "Anomalies: " + AnomalyCounterScript.TheAnomalyCounter;
         }
-        else {
-        yield return new WaitForSeconds(2.0f);
-        AnomalyNotFoundText.SetActive(true);
-        AnomalyNotFoundText.GetComponent<Text>().text = "No type Other Anomaly found";
-        yield return new WaitForSeconds(2.0f);
-        AnomalyNotFoundText.SetActive(false);
-        ObjectDisappearingBtn.enabled = true;
-        ObjectMovementBtn.enabled = true;
-        IntruderBtn.enabled = true;
-        NoiseBtn.enabled = true;
-        OtherBtn.enabled = true;
-        DemonicPresenceBtn.enabled = true;
+        else 
+        {
+            yield return new WaitForSeconds(2.0f);
+            AnomalyNotFoundText.SetActive(true);
+            AnomalyNotFoundText.GetComponent<Text>().text = "No type Other Anomaly found";
+            yield return new WaitForSeconds(2.0f);
+            AnomalyNotFoundText.SetActive(false);
+            ObjectDisappearingBtn.enabled = true;
+            ObjectMovementBtn.enabled = true;
+            IntruderBtn.enabled = true;
+            NoiseBtn.enabled = true;
+            OtherBtn.enabled = true;
+            DemonicPresenceBtn.enabled = true;
         }
     }
+
     IEnumerator FixDemonicPresence()
     {
         ButtonClick.Play();
@@ -417,34 +433,37 @@ public AnomalyCounterScript AnomalyCounterScript;
         DemonicPresenceBtn.enabled = false;
         yield return new WaitForSeconds(2.0f);
         //// IF TRUE ////
-        if (DemonicPresenceAnomaly == true) {
-        AnomalyFixed.SetActive(true);
-        AnomalyFixSound.Play();
-        OuijaBoard.GetComponent<Animation>().Play("zozoidle");
-        yield return new WaitForSeconds(2.0f);
-        ObjectDisappearingBtn.enabled = true;
-        ObjectMovementBtn.enabled = true;
-        IntruderBtn.enabled = true;
-        NoiseBtn.enabled = true;
-        OtherBtn.enabled = true;
-        DemonicPresenceBtn.enabled = true;
-        AnomalyFixed.SetActive(false);
-        AnomalyCounterScript.TheAnomalyCounter--;
-        DemonicPresenceAnomaly = false;
-        AnomalyCountText.GetComponent<Text>().text = "Anomalies: " + AnomalyCounterScript.TheAnomalyCounter;
+        if (DemonicPresenceAnomaly == true) 
+        {
+            AnomalyFixed.SetActive(true);
+            AnomalyFixSound.Play();
+            OuijaBoard.GetComponent<Animation>().Stop("zozo2");
+            OuijaBoard.GetComponent<Animation>().Play("zozoidle");
+            yield return new WaitForSeconds(2.0f);
+            ObjectDisappearingBtn.enabled = true;
+            ObjectMovementBtn.enabled = true;
+            IntruderBtn.enabled = true;
+            NoiseBtn.enabled = true;
+            OtherBtn.enabled = true;
+            DemonicPresenceBtn.enabled = true;
+            AnomalyFixed.SetActive(false);
+            AnomalyCounterScript.TheAnomalyCounter--;
+            DemonicPresenceAnomaly = false;
+            AnomalyCountText.GetComponent<Text>().text = "Anomalies: " + AnomalyCounterScript.TheAnomalyCounter;
         }
-        else {
-        yield return new WaitForSeconds(2.0f);
-        AnomalyNotFoundText.SetActive(true);
-        AnomalyNotFoundText.GetComponent<Text>().text = "No type Demonic Presence Anomaly found";
-        yield return new WaitForSeconds(2.0f);
-        AnomalyNotFoundText.SetActive(false);
-        ObjectDisappearingBtn.enabled = true;
-        ObjectMovementBtn.enabled = true;
-        IntruderBtn.enabled = true;
-        NoiseBtn.enabled = true;
-        OtherBtn.enabled = true;
-        DemonicPresenceBtn.enabled = true;
+        else 
+        {
+            yield return new WaitForSeconds(2.0f);
+            AnomalyNotFoundText.SetActive(true);
+            AnomalyNotFoundText.GetComponent<Text>().text = "No type Demonic Presence Anomaly found";
+            yield return new WaitForSeconds(2.0f);
+            AnomalyNotFoundText.SetActive(false);
+            ObjectDisappearingBtn.enabled = true;
+            ObjectMovementBtn.enabled = true;
+            IntruderBtn.enabled = true;
+            NoiseBtn.enabled = true;
+            OtherBtn.enabled = true;
+            DemonicPresenceBtn.enabled = true;
         }
     }
 }
