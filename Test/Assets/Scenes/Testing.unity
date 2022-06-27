@@ -9155,8 +9155,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: AnomalyGen, Assembly-CSharp
+      - m_Target: {fileID: 2043509512}
+        m_TargetAssemblyTypeName: Bathroom, Assembly-CSharp
         m_MethodName: FixAnomaly
         m_Mode: 1
         m_Arguments:
@@ -9546,6 +9546,7 @@ RectTransform:
   - {fileID: 945506708}
   - {fileID: 1213349654}
   - {fileID: 1581534810}
+  - {fileID: 1530977966}
   - {fileID: 867891054}
   m_Father: {fileID: 1877968648}
   m_RootOrder: 13
@@ -9836,6 +9837,8 @@ Transform:
   - {fileID: 1126581525}
   - {fileID: 895758968}
   - {fileID: 551424510}
+  - {fileID: 1006878351}
+  - {fileID: 1960542318}
   m_Father: {fileID: 945430887}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -10582,7 +10585,7 @@ RectTransform:
   m_Children:
   - {fileID: 1510070922}
   m_Father: {fileID: 774972744}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -10633,8 +10636,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: AnomalyGen, Assembly-CSharp
+      - m_Target: {fileID: 2043509512}
+        m_TargetAssemblyTypeName: Bathroom, Assembly-CSharp
         m_MethodName: CloseWindow
         m_Mode: 1
         m_Arguments:
@@ -12090,8 +12093,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: AnomalyGen, Assembly-CSharp
+      - m_Target: {fileID: 2043509512}
+        m_TargetAssemblyTypeName: Bathroom, Assembly-CSharp
         m_MethodName: IntruderBtnClicked
         m_Mode: 1
         m_Arguments:
@@ -13255,6 +13258,133 @@ Light:
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!1 &1006878350
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1006878351}
+  - component: {fileID: 1006878352}
+  m_Layer: 0
+  m_Name: FurnitureMoving - Bedroom
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1006878351
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1006878350}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 39.2, y: 12.8, z: 82.31}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 799677732}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &1006878352
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1006878350}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 3357374d225032b4ca59fdc3a2c3f75d, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 8.112427
+  Pan2D: 0
+  rolloffMode: 1
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &1012422455
 GameObject:
   m_ObjectHideFlags: 0
@@ -13780,6 +13910,133 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1038572607}
   m_Mesh: {fileID: -5495902117074765545, guid: 010fff18fc655074abafe72624666e14, type: 3}
+--- !u!1 &1041603605
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1041603606}
+  - component: {fileID: 1041603607}
+  m_Layer: 0
+  m_Name: ChairSound
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1041603606
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1041603605}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.37, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1417016378}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &1041603607
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1041603605}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: da206205bd79fdd43a0dd3e18baefd44, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 7.46
+  Pan2D: 0
+  rolloffMode: 1
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &1052322143
 GameObject:
   m_ObjectHideFlags: 0
@@ -14476,10 +14733,12 @@ MonoBehaviour:
   OuijaBoard: {fileID: 919132147846609063}
   DisappearingBlanket: {fileID: 352061542665202486}
   IntruderObj: {fileID: 7763793286848466089}
+  MovingChair: {fileID: 1417016377}
   IntruderSound: {fileID: 0}
-  NoiseSound: {fileID: 0}
+  NoiseSound: {fileID: 1006878352}
   AnomalyFixSound: {fileID: 1068369722}
   ButtonClick: {fileID: 1901368750}
+  ChairSound: {fileID: 1041603607}
   AnomalyCounterScript: {fileID: 693734648}
 --- !u!1 &1087507301
 GameObject:
@@ -16116,8 +16375,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: AnomalyGen, Assembly-CSharp
+      - m_Target: {fileID: 2043509512}
+        m_TargetAssemblyTypeName: Bathroom, Assembly-CSharp
         m_MethodName: NoiseBtnClicked
         m_Mode: 1
         m_Arguments:
@@ -23843,8 +24102,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1417016378}
+  - component: {fileID: 1417016379}
   m_Layer: 0
-  m_Name: chair (2)
+  m_Name: movingchair
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -23858,16 +24118,34 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1417016377}
   m_LocalRotation: {x: -0, y: -0.35086772, z: -0, w: 0.93642503}
-  m_LocalPosition: {x: 0.83999634, y: -0.4100001, z: -3.3549995}
+  m_LocalPosition: {x: 0.83999634, y: -0.4100001, z: -3.355}
   m_LocalScale: {x: 1.4386183, y: 1.4386184, z: 1.4386183}
   m_Children:
   - {fileID: 1389856006}
   - {fileID: 900857305}
   - {fileID: 911044512}
   - {fileID: 151425424}
+  - {fileID: 1041603606}
   m_Father: {fileID: 299059182}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: -41.081, z: 0}
+--- !u!111 &1417016379
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1417016377}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: 26ed50588c460c74f9c15d60e740eda6, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: 26ed50588c460c74f9c15d60e740eda6, type: 2}
+  - {fileID: 7400000, guid: 4ece70176c11ee64eaf5eeafd78d5ad6, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 0
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!1 &1432235043
 GameObject:
   m_ObjectHideFlags: 0
@@ -25109,6 +25387,139 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1529722290}
   m_Mesh: {fileID: -4623697248067045805, guid: 99a8cef8d6926bc4bb9a9a0f13e51a07, type: 3}
+--- !u!1 &1530977965
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1530977966}
+  - component: {fileID: 1530977969}
+  - component: {fileID: 1530977968}
+  - component: {fileID: 1530977967}
+  m_Layer: 5
+  m_Name: DemonicPresence
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1530977966
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1530977965}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1555274993}
+  m_Father: {fileID: 774972744}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -154, y: -52}
+  m_SizeDelta: {x: 175.957, y: 85.4634}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1530977967
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1530977965}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 0, g: 0, b: 0, a: 0.23529412}
+    m_HighlightedColor: {r: 0, g: 0, b: 0, a: 0.5764706}
+    m_PressedColor: {r: 0, g: 0, b: 0, a: 1}
+    m_SelectedColor: {r: 0, g: 0, b: 0, a: 0.23529412}
+    m_DisabledColor: {r: 0, g: 0, b: 0, a: 0}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 1530977968}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2043509512}
+        m_TargetAssemblyTypeName: Bathroom, Assembly-CSharp
+        m_MethodName: DemonicPresenceBtnClicked
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1530977968
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1530977965}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.3137255}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1530977969
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1530977965}
+  m_CullTransparentMesh: 1
 --- !u!1 &1533797639
 GameObject:
   m_ObjectHideFlags: 0
@@ -25252,6 +25663,87 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1544809679}
+  m_CullTransparentMesh: 1
+--- !u!1 &1555274992
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1555274993}
+  - component: {fileID: 1555274995}
+  - component: {fileID: 1555274994}
+  m_Layer: 5
+  m_Name: Text
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1555274993
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1555274992}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1530977966}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1555274994
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1555274992}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.19952321, g: 1, b: 0, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: 81a0759092028c641a4caf7199e3a46c, type: 3}
+    m_FontSize: 20
+    m_FontStyle: 1
+    m_BestFit: 0
+    m_MinSize: 0
+    m_MaxSize: 40
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1.2
+  m_Text: 'Demonic
+
+    Presence'
+--- !u!222 &1555274995
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1555274992}
   m_CullTransparentMesh: 1
 --- !u!1 &1556430117
 GameObject:
@@ -25562,8 +26054,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: AnomalyGen, Assembly-CSharp
+      - m_Target: {fileID: 2043509512}
+        m_TargetAssemblyTypeName: Bathroom, Assembly-CSharp
         m_MethodName: OtherBtnClicked
         m_Mode: 1
         m_Arguments:
@@ -30635,8 +31127,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: AnomalyGen, Assembly-CSharp
+      - m_Target: {fileID: 2043509512}
+        m_TargetAssemblyTypeName: Bathroom, Assembly-CSharp
         m_MethodName: ObjectMovementBtnClicked
         m_Mode: 1
         m_Arguments:
@@ -30685,6 +31177,133 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1949877339}
   m_CullTransparentMesh: 1
+--- !u!1 &1960542317
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1960542318}
+  - component: {fileID: 1960542319}
+  m_Layer: 0
+  m_Name: FurnitureMoving - Bathroom
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1960542318
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1960542317}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 53.31, y: 12.8, z: 80.07}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 799677732}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &1960542319
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1960542317}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 3357374d225032b4ca59fdc3a2c3f75d, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 8.112427
+  Pan2D: 0
+  rolloffMode: 1
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &1978257917
 GameObject:
   m_ObjectHideFlags: 0
@@ -31555,8 +32174,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: AnomalyGen, Assembly-CSharp
+      - m_Target: {fileID: 2043509512}
+        m_TargetAssemblyTypeName: Bathroom, Assembly-CSharp
         m_MethodName: ObjectDisappearingBtnClicked
         m_Mode: 1
         m_Arguments:
@@ -31867,12 +32486,37 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   AnomalyPicked: 0
+  MovementPicker: 0
+  DisappearingPicker: 0
   ObjectDisappearingAnomaly: 0
   ObjectMovementAnomaly: 0
   IntruderAnomaly: 0
   NoiseAnomaly: 0
   OtherAnomaly: 0
+  DemonicPresenceAnomaly: 0
   AnomalyGeneratedText: {fileID: 61978899}
+  AnomalyCountText: {fileID: 143844144}
+  AnomalyNotFoundText: {fileID: 728369554}
+  FixAnomalyBtn: {fileID: 747456755}
+  AnomalyWindow: {fileID: 774972743}
+  AnomalyWindowClose: {fileID: 867891053}
+  AnomalyFixed: {fileID: 371704011}
+  ObjectDisappearingBtn: {fileID: 2022693211}
+  ObjectMovementBtn: {fileID: 1949877341}
+  IntruderBtn: {fileID: 945506709}
+  NoiseBtn: {fileID: 1213349655}
+  OtherBtn: {fileID: 1581534811}
+  DemonicPresenceBtn: {fileID: 1530977967}
+  Right: {fileID: 2005214408}
+  Left: {fileID: 1432235045}
+  Light1: {fileID: 1620072536}
+  IntruderObj: {fileID: 0}
+  Bleach_Disappearing: {fileID: 4055892655571722853}
+  Pentagram: {fileID: 1485686218073414433}
+  NoiseSound: {fileID: 1960542319}
+  AnomalyFixSound: {fileID: 1068369722}
+  ButtonClick: {fileID: 1901368750}
+  AnomalyCounterScript: {fileID: 693734648}
 --- !u!1 &2064650850
 GameObject:
   m_ObjectHideFlags: 0
@@ -32442,12 +33086,37 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   AnomalyPicked: 0
+  MovementPicker: 0
+  DisappearingPicker: 0
   ObjectDisappearingAnomaly: 0
   ObjectMovementAnomaly: 0
   IntruderAnomaly: 0
   NoiseAnomaly: 0
   OtherAnomaly: 0
+  DemonicPresenceAnomaly: 0
   AnomalyGeneratedText: {fileID: 0}
+  AnomalyCountText: {fileID: 0}
+  AnomalyNotFoundText: {fileID: 0}
+  FixAnomalyBtn: {fileID: 0}
+  AnomalyWindow: {fileID: 0}
+  AnomalyWindowClose: {fileID: 0}
+  AnomalyFixed: {fileID: 0}
+  ObjectDisappearingBtn: {fileID: 0}
+  ObjectMovementBtn: {fileID: 0}
+  IntruderBtn: {fileID: 0}
+  NoiseBtn: {fileID: 0}
+  OtherBtn: {fileID: 0}
+  DemonicPresenceBtn: {fileID: 0}
+  Right: {fileID: 0}
+  Left: {fileID: 0}
+  Light1: {fileID: 0}
+  IntruderObj: {fileID: 0}
+  Bleach_Disappearing: {fileID: 0}
+  Pentagram: {fileID: 0}
+  NoiseSound: {fileID: 0}
+  AnomalyFixSound: {fileID: 0}
+  ButtonClick: {fileID: 0}
+  AnomalyCounterScript: {fileID: 0}
 --- !u!1 &2122528114
 GameObject:
   m_ObjectHideFlags: 0
@@ -41404,13 +42073,31 @@ GameObject:
   - component: {fileID: 8636912128584128560}
   - component: {fileID: 7008102953140527013}
   - component: {fileID: 7014965154167385787}
+  - component: {fileID: 4055892655571722854}
   m_Layer: 0
-  m_Name: Bathroom_Bleach
+  m_Name: DisappearingBleach
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!111 &4055892655571722854
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4055892655571722853}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: ac3074132d4b0fd479857fd265dee7d4, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: ac3074132d4b0fd479857fd265dee7d4, type: 2}
+  - {fileID: 7400000, guid: b9682326024b4d147bf4b333705c35c1, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 0
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!1 &4064981437826313211
 GameObject:
   m_ObjectHideFlags: 0
@@ -52116,7 +52803,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4055892655571722853}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.006, y: 0.0050260797, z: -0.0421}
+  m_LocalPosition: {x: -0.006, y: 0.00502608, z: -0.0421}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 8205815728820790569}

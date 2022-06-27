@@ -244,11 +244,7 @@ public GameObject RemPodLight4;
     {  
         ButtonClick.Play();
         //// DISABLE ALL BUTTONS WHEN ONE BUTTON IS PRESSED ////
-        ObjectDisappearingBtn.enabled = false;
-        ObjectMovementBtn.enabled = false;
-        IntruderBtn.enabled = false;
-        NoiseBtn.enabled = false;
-        OtherBtn.enabled = false;
+        DisableButtons();
         yield return new WaitForSeconds(2.0f);
         //// IF TRUE ////
         if (ObjectDisappearingAnomaly == true) 
@@ -256,11 +252,7 @@ public GameObject RemPodLight4;
             AnomalyFixed.SetActive(true);
             AnomalyFixSound.Play();
             yield return new WaitForSeconds(2.0f);
-            ObjectDisappearingBtn.enabled = true;
-            ObjectMovementBtn.enabled = true;
-            IntruderBtn.enabled = true;
-            NoiseBtn.enabled = true;
-            OtherBtn.enabled = true;
+            EnableButtons();
             Television.GetComponent<Animation>().Play("Tv_Idle");
             Chair_Disappearing.GetComponent<Animation>().Play("Chair_Idle");
             Glass_Disappearing.GetComponent<Animation>().Play("Glass_Idle");
@@ -276,11 +268,7 @@ public GameObject RemPodLight4;
             AnomalyNotFoundText.GetComponent<Text>().text = "No type Object Disappearing Anomaly found";
             yield return new WaitForSeconds(2.0f);
             AnomalyNotFoundText.SetActive(false);
-            ObjectDisappearingBtn.enabled = true;
-            ObjectMovementBtn.enabled = true;
-            IntruderBtn.enabled = true;
-            NoiseBtn.enabled = true;
-            OtherBtn.enabled = true;
+            EnableButtons();
         }
     }
     
@@ -288,11 +276,7 @@ public GameObject RemPodLight4;
     {
         ButtonClick.Play();
         //// DISABLE ALL BUTTONS WHEN ONE BUTTON IS PRESSED ////
-        ObjectDisappearingBtn.enabled = false;
-        ObjectMovementBtn.enabled = false;
-        IntruderBtn.enabled = false;
-        NoiseBtn.enabled = false;
-        OtherBtn.enabled = false;
+        DisableButtons();
         yield return new WaitForSeconds(2.0f);
         //// IF TRUE ////
         if (ObjectMovementAnomaly == true) 
@@ -300,11 +284,7 @@ public GameObject RemPodLight4;
             AnomalyFixed.SetActive(true);
             AnomalyFixSound.Play();
             yield return new WaitForSeconds(2.0f);
-            ObjectDisappearingBtn.enabled = true;
-            ObjectMovementBtn.enabled = true;
-            IntruderBtn.enabled = true;
-            NoiseBtn.enabled = true;
-            OtherBtn.enabled = true;
+            EnableButtons();
             AnomalyFixed.SetActive(false);
             MovingPainting1.GetComponent<Animation>().Play("IdlePainting2");
             MovingChair.GetComponent<Animation>().Play("IdleChair");
@@ -319,11 +299,7 @@ public GameObject RemPodLight4;
             AnomalyNotFoundText.GetComponent<Text>().text = "No type Object Movement Anomaly found";
             yield return new WaitForSeconds(2.0f);
             AnomalyNotFoundText.SetActive(false);
-            ObjectDisappearingBtn.enabled = true;
-            ObjectMovementBtn.enabled = true;
-            IntruderBtn.enabled = true;
-            NoiseBtn.enabled = true;
-            OtherBtn.enabled = true;
+            EnableButtons();
         }
     }
 
@@ -331,11 +307,7 @@ public GameObject RemPodLight4;
     {
         ButtonClick.Play();
         //// DISABLE ALL BUTTONS WHEN ONE BUTTON IS PRESSED ////
-        ObjectDisappearingBtn.enabled = false;
-        ObjectMovementBtn.enabled = false;
-        IntruderBtn.enabled = false;
-        NoiseBtn.enabled = false;
-        OtherBtn.enabled = false;
+        DisableButtons();
         yield return new WaitForSeconds(2.0f);
         //// IF TRUE ////
         if (IntruderAnomaly == true) 
@@ -343,11 +315,7 @@ public GameObject RemPodLight4;
             AnomalyFixed.SetActive(true);
             AnomalyFixSound.Play();
             yield return new WaitForSeconds(2.0f);
-            ObjectDisappearingBtn.enabled = true;
-            ObjectMovementBtn.enabled = true;
-            IntruderBtn.enabled = true;
-            NoiseBtn.enabled = true;
-            OtherBtn.enabled = true;
+            EnableButtons();
             IntruderObj.SetActive(false);
             Light3.SetActive(false);
             AnomalyFixed.SetActive(false);
@@ -361,12 +329,7 @@ public GameObject RemPodLight4;
             AnomalyNotFoundText.SetActive(true);
             AnomalyNotFoundText.GetComponent<Text>().text = "No type Intruder Anomaly found";
             yield return new WaitForSeconds(2.0f);
-            AnomalyNotFoundText.SetActive(false);
-            ObjectDisappearingBtn.enabled = true;
-            ObjectMovementBtn.enabled = true;
-            IntruderBtn.enabled = true;
-            NoiseBtn.enabled = true;
-            OtherBtn.enabled = true;
+            EnableButtons();
         }
     }
 
@@ -374,11 +337,7 @@ public GameObject RemPodLight4;
     {
         ButtonClick.Play();
         //// DISABLE ALL BUTTONS WHEN ONE BUTTON IS PRESSED ////
-        ObjectDisappearingBtn.enabled = false;
-        ObjectMovementBtn.enabled = false;
-        IntruderBtn.enabled = false;
-        NoiseBtn.enabled = false;
-        OtherBtn.enabled = false;
+        DisableButtons();
         yield return new WaitForSeconds(2.0f);
         //// IF TRUE ////
         if (NoiseAnomaly == true) 
@@ -387,11 +346,7 @@ public GameObject RemPodLight4;
             AnomalyFixSound.Play();
             AnomalyFixed.SetActive(true);
             yield return new WaitForSeconds(2.0f);
-            ObjectDisappearingBtn.enabled = true;
-            ObjectMovementBtn.enabled = true;
-            IntruderBtn.enabled = true;
-            NoiseBtn.enabled = true;
-            OtherBtn.enabled = true;
+            EnableButtons();
             AnomalyFixed.SetActive(false);
             AnomalyCounterScript.TheAnomalyCounter--;
             NoiseSound.Stop();
@@ -404,12 +359,7 @@ public GameObject RemPodLight4;
             AnomalyNotFoundText.SetActive(true);
             AnomalyNotFoundText.GetComponent<Text>().text = "No type Noise Anomaly found";
             yield return new WaitForSeconds(2.0f);
-            AnomalyNotFoundText.SetActive(false);
-            ObjectDisappearingBtn.enabled = true;
-            ObjectMovementBtn.enabled = true;
-            IntruderBtn.enabled = true;
-            NoiseBtn.enabled = true;
-            OtherBtn.enabled = true;
+            EnableButtons();
         }
     }
 
@@ -417,11 +367,7 @@ public GameObject RemPodLight4;
     {
         ButtonClick.Play();
         //// DISABLE ALL BUTTONS WHEN ONE BUTTON IS PRESSED ////
-        ObjectDisappearingBtn.enabled = false;
-        ObjectMovementBtn.enabled = false;
-        IntruderBtn.enabled = false;
-        NoiseBtn.enabled = false;
-        OtherBtn.enabled = false;
+        DisableButtons();
         yield return new WaitForSeconds(2.0f);
         //// IF TRUE ////
         if (OtherAnomaly == true) 
@@ -429,11 +375,7 @@ public GameObject RemPodLight4;
             AnomalyFixed.SetActive(true);
             AnomalyFixSound.Play();
             yield return new WaitForSeconds(2.0f);
-            ObjectDisappearingBtn.enabled = true;
-            ObjectMovementBtn.enabled = true;
-            IntruderBtn.enabled = true;
-            NoiseBtn.enabled = true;
-            OtherBtn.enabled = true;
+            EnableButtons();
             AnomalyFixed.SetActive(false);
             AnomalyCounterScript.TheAnomalyCounter--;
             OtherAnomaly = false;
@@ -448,11 +390,7 @@ public GameObject RemPodLight4;
             AnomalyNotFoundText.GetComponent<Text>().text = "No type Other Anomaly found";
             yield return new WaitForSeconds(2.0f);
             AnomalyNotFoundText.SetActive(false);
-            ObjectDisappearingBtn.enabled = true;
-            ObjectMovementBtn.enabled = true;
-            IntruderBtn.enabled = true;
-            NoiseBtn.enabled = true;
-            OtherBtn.enabled = true;
+            EnableButtons();
         }
     }
 
@@ -460,12 +398,7 @@ public GameObject RemPodLight4;
     {
         ButtonClick.Play();
         //// DISABLE ALL BUTTONS WHEN ONE BUTTON IS PRESSED ////
-        ObjectDisappearingBtn.enabled = false;
-        ObjectMovementBtn.enabled = false;
-        IntruderBtn.enabled = false;
-        NoiseBtn.enabled = false;
-        OtherBtn.enabled = false;
-        DemonicPresenceBtn.enabled = false;
+        DisableButtons();
         yield return new WaitForSeconds(2.0f);
         //// IF TRUE ////
         if (DemonicPresenceAnomaly == true) 
@@ -473,12 +406,7 @@ public GameObject RemPodLight4;
             AnomalyFixed.SetActive(true);
             AnomalyFixSound.Play();
             yield return new WaitForSeconds(2.0f);
-            ObjectDisappearingBtn.enabled = true;
-            ObjectMovementBtn.enabled = true;
-            IntruderBtn.enabled = true;
-            NoiseBtn.enabled = true;
-            OtherBtn.enabled = true;
-            DemonicPresenceBtn.enabled = true;
+            EnableButtons();
             RemPodSound.Stop();
             RemPodScript.SetActive(false);
             AnomalyFixed.SetActive(false);
@@ -497,12 +425,27 @@ public GameObject RemPodLight4;
             AnomalyNotFoundText.GetComponent<Text>().text = "No type Demonic Presence Anomaly found";
             yield return new WaitForSeconds(2.0f);
             AnomalyNotFoundText.SetActive(false);
-            ObjectDisappearingBtn.enabled = true;
-            ObjectMovementBtn.enabled = true;
-            IntruderBtn.enabled = true;
-            NoiseBtn.enabled = true;
-            OtherBtn.enabled = true;
-            DemonicPresenceBtn.enabled = true;
+            EnableButtons();
         }
+    }
+    
+    public void DisableButtons()
+    {        
+        ObjectDisappearingBtn.enabled = false;
+        ObjectMovementBtn.enabled = false;
+        IntruderBtn.enabled = false;
+        NoiseBtn.enabled = false;
+        OtherBtn.enabled = false;
+        DemonicPresenceBtn.enabled = false;
+    }
+
+    public void EnableButtons()
+    {
+        ObjectDisappearingBtn.enabled = true;
+        ObjectMovementBtn.enabled = true;
+        IntruderBtn.enabled = true;
+        NoiseBtn.enabled = true;
+        OtherBtn.enabled = true;
+        DemonicPresenceBtn.enabled = true;
     }
 }
