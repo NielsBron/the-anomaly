@@ -45,6 +45,7 @@ public GameObject Light2;
 public GameObject OuijaBoard;
 public GameObject DisappearingBlanket;
 public GameObject IntruderObj;
+public GameObject MovingChair;
 
 
 /// AUDIO ///
@@ -52,6 +53,7 @@ public AudioSource IntruderSound;
 public AudioSource NoiseSound;
 public AudioSource AnomalyFixSound;
 public AudioSource ButtonClick;
+public AudioSource ChairSound;
 
 public AnomalyCounterScript AnomalyCounterScript;
     void Update()
@@ -61,7 +63,7 @@ public AnomalyCounterScript AnomalyCounterScript;
 
     public void AnomalyPicker()
     {
-        AnomalyPicked = Random.Range(1,7);
+        AnomalyPicked = Random.Range(4,5);
 
         if (AnomalyPicked == 1 && ObjectDisappearingAnomaly == false)
         {
@@ -114,6 +116,8 @@ public AnomalyCounterScript AnomalyCounterScript;
         AnomalyCounterScript.TheAnomalyCounter++;
         Debug.Log("Object Movement");
         AnomalyGeneratedText.GetComponent<Text>().text = "Object Movement";
+        MovingChair.GetComponent<Animation>().Play("MovingChair2");
+        ChairSound.Play();
     }
 
     public void Intruder()
@@ -129,6 +133,7 @@ public AnomalyCounterScript AnomalyCounterScript;
         AnomalyCounterScript.TheAnomalyCounter++;
         Debug.Log("Noise");
         AnomalyGeneratedText.GetComponent<Text>().text = "Noise";
+        NoiseSound.Play();
     }
 
     public void Other()
@@ -258,6 +263,7 @@ public AnomalyCounterScript AnomalyCounterScript;
         {
             AnomalyFixed.SetActive(true);
             AnomalyFixSound.Play();
+            MovingChair.GetComponent<Animation>().Play("IdleChair2");
             yield return new WaitForSeconds(2.0f);
             ObjectDisappearingBtn.enabled = true;
             ObjectMovementBtn.enabled = true;
