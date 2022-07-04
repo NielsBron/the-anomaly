@@ -56,6 +56,7 @@ public AudioSource ButtonClick;
 public AudioSource ChairSound;
 
 public AnomalyCounterScript AnomalyCounterScript;
+
     void Update()
     {
         
